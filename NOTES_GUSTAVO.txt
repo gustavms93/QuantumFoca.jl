@@ -1,0 +1,21 @@
+It's always useful to analyze excited states in QM calculations: electron-hole populations 
+by molecular fragments to characterize the nature of the excited state, or having the descomposition
+of the wavefunction in molecular fragments to set up populations of excitonic character along the 
+participant molecules.
+
+David Casanova & Anna Krylov have implemented the analysis in Q-Chem, based on the decomposition of the
+RAS-Spin Flip (RAS-SF) wavefunction into three contributions by molecular fragments:
+
+|PSI> = |LE> + |ME> + |CR>,
+
+where LE, ME, and CR are Localized Excitations, Multiexcitonic character, and Charge Resonance Character.
+It's been useful to characterize excited states for systems that can perform singlet fission or where a charge
+transfer process is crucial for a reaction chemistry to happen. However, these type of analysis are only for single
+point calculations, setting up only on-the-fly modelling when a dynamic process is studied.
+
+Along with the wavefunction analysis, the radical character could be performed by different population analysis,
+as the Yamaguchi model, for example (a fast approach is available at https://manual.q-chem.com/5.1/sect-odd_electron.html).
+
+A good mid-long term goal could be setting up a method to study these population changes in dynamic calculations, no matter
+the used method (QM, QM/MM), for having a better understanding of the molecular fragments and their changes in photophysical/photochemical
+processes.
